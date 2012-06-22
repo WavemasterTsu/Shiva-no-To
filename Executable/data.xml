@@ -1,0 +1,193 @@
+<tower>
+<num_of_floors>4</num_of_floors>
+
+<floor number = "1">
+<num_of_rooms>3</num_of_rooms>
+<init_location x_coord = "2" y_coord = "0" />
+
+<room x_coord = "2" y_coord = "0">
+<movement_text>This is room 1.</movement_text>
+<special type = "None" />
+</room>
+
+<room x_coord = "2" y_coord = "1">
+<movement_text>This is room 2.</movement_text>
+<special type = "None" />
+</room>
+
+<room x_coord = "2" y_coord = "2">
+<movement_text>This is room 3.</movement_text>
+<special type = "Stairwell" />
+</room>
+
+</floor>
+
+<floor number = "2">
+<num_of_rooms>6</num_of_rooms>
+<init_location x_coord = "2" y_coord = "2" />
+
+<room x_coord = "1" y_coord = "0">
+<movement_text>Try using the examine and action functions.</movement_text>
+<examine_text>You see a Lever on the floor.</examine_text>
+<action_text>Pulling on the Lever you hear a door unlock.</action_text>
+<special type = "Lever" x_coord = "3" y_coord = "0" />
+</room>
+
+<room x_coord = "3" y_coord = "0">
+<movement_text>You climb up the Stairwell.</movement_text>
+<special type = "Stairwell" />
+</room>
+
+<room x_coord = "1" y_coord = "1" />
+
+<room x_coord = "2" y_coord = "1" />
+
+<room x_coord = "3" y_coord = "1">
+<movement_text>You see a door. The switch to open it is in another room.</movement_text>
+</room>
+
+<room x_coord = "2" y_coord = "2">
+<movement_text>You have reached the second floor.</movement_text>
+</room>
+
+</floor>
+
+<floor number = "3">
+
+<num_of_rooms>8</num_of_rooms>
+<init_location x_coord = "3" y_coord = "0" />
+
+<room x_coord = "3" y_coord = "0">
+<movement_text>You have reached the third floor.</movement_text>
+</room>
+
+<room x_coord = "3" y_coord = "1" />
+
+<room x_coord = "0" y_coord = "2">
+<movement_text>You climb up the Stairwell.</movement_text>
+<special type = "Stairwell" />
+</room>
+
+<room x_coord = "1" y_coord = "2">
+<movement_text>Another locked door.</movement_text>
+</room>
+
+<room x_coord = "2" y_coord = "2">
+<movement_text>You see a Stairwell ahead.</movement_text>
+</room>
+
+<room x_coord = "3" y_coord = "2" />
+
+<room x_coord = "3" y_coord = "3" />
+
+<room x_coord = "3" y_coord = "4">
+<movement_text>There's a switch in this room.</movement_text>
+<examine_text>Use the action command to advance.</examine_text>
+<action_text>You hear a door unlock in the distance.</action_text>
+<special type = "Lever" x_coord = "0" y_coord = "2" />
+</room>
+
+</floor>
+
+<floor number = "4">
+
+<num_of_rooms>17</num_of_rooms>
+<init_location x_coord = "0" y_coord = "2" />
+
+<room x_coord = "1" y_coord = "0">
+<movement_text>There is a Lever in here.</movement_text>
+<examine_text>This Lever may have a partner.</examine_text>
+<action_text>You hear a door unlock somewhere.</action_text>
+<special type = "Lever" x_coord = "0" y_coord = "1" />
+</room>
+
+<room x_coord = "2" y_coord = "0">
+<movement_text>There is a room with a Lever ahead.</movement_text>
+</room>
+
+<room x_coord = "3" y_coord = "0">
+<movement_text>You see a Lever at the end of the hall.</movement_text>
+</room>
+
+<room x_coord = "4" y_coord = "0">
+<movement_text>You turn the corner.</movement_text>
+</room>
+
+<room x_coord = "0" y_coord = "1">
+<movement_text>You climb up the stairs.</movement_text>
+<special type = "Stairwell" />
+</room>
+
+<room x_coord = "4" y_coord = "1">
+<movement_text>There is a Lever to the north of you.</movement_text>
+</room>
+
+<room x_coord = "0" y_coord = "2">
+<movement_text>You have reached floor 4.</movement_text>
+</room>
+
+<room x_coord = "1" y_coord = "2" />
+
+<room x_coord = "2" y_coord = "2">
+<movement_text>You see an ogre in front of you. Maybe there's an item that will beat him?</movement_text>
+<new_movement_text>You see a switch past where the ogre used to be.</new_movement_text>
+<examine_text>The ogre looks pretty fierce. Ancient Nordic weaponry anyone?</examine_text>
+<action_text>The ogre makes a passing swipe at you. I wouldn't approach without a weapon.</action_text>
+
+<special type = "Fight">
+<outcome>false</outcome>
+<outcome_success>You slice off the ogre's head.</outcome_success>
+<outcome_fail>The ogre bashes your head in. Try the level again.</outcome_fail>
+</special>
+
+</room>
+
+<room x_coord = "3" y_coord = "2">
+<movement_text>There is a Lever in the room ahead of you.</movement_text>
+</room>
+
+<room x_coord = "4" y_coord = "2">
+<movement_text>There is a Lever in this room.</movement_text>
+<examine_text>You see a fairly obvious switch on the wall.</examine_text>
+<action_text>You hear a door click somewhere. This switch might have a partner.</action_text>
+<special type = "Lever" x_coord = "0" y_coord = "1" />
+</room>
+
+<room x_coord = "0" y_coord = "3">
+<movement_text>There is a Lever ahead of you.</movement_text>
+</room>
+
+<room x_coord = "2" y_coord = "3" />
+
+<room x_coord = "0" y_coord = "4">
+<movement_text>There is a Lever in this room.</movement_text>
+<examine_text>You see a big rusty Lever on the floor in front of you.</examine_text>
+<action_text>You hear a door open somewhere. This Lever has no partner.</action_text>
+<special type = "Lever" x_coord = "4" y_coord = "4" />
+</room>
+
+<room x_coord = "2" y_coord = "4">
+<movement_text>You see a locked door at the end of the hall.</movement_text>
+</room>
+
+<room x_coord = "3" y_coord = "4">
+<movement_text>You see a locked door ahead of you.</movement_text>
+</room>
+
+<room x_coord = "4" y_coord = "4">
+<movement_text>Inside the room you see the fabled weapon, Mjolnir.</movement_text>
+<new_movement_text>This room once carried the great hammer of Mjolnir.</new_movement_text>
+<examine_text>Use the action button to take the weapon.</examine_text>
+<action_text>You lift the grand weapon into your hand. Mjolnir is now yours to command.</action_text>
+
+<special type = "Item">
+<index>0</index>
+<name>Mjolnir</name>
+<description>In Norse mythology, Mjolnir is the hammer of Thor, a major god associated with thunder in Norse mythology.</description>
+</special>
+
+</room>
+
+</floor>
+
+</tower>
