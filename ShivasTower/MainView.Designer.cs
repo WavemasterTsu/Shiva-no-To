@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
+using ShivasTower.Properties;
 
 namespace ShivasTower
 {
@@ -221,7 +222,7 @@ namespace ShivasTower
             // 
             // btnNorth
             //
-            this.btnNorth.Image = AppResources.north;
+            this.btnNorth.Image = Resources.north;
             this.btnNorth.Enabled = true;
             this.btnNorth.Location = new System.Drawing.Point(56, 8);
             this.btnNorth.Name = "btnNorth";
@@ -232,7 +233,7 @@ namespace ShivasTower
             // 
             // btnWest
             // 
-            this.btnWest.Image = AppResources.west;
+            this.btnWest.Image = Resources.west;
             this.btnWest.Enabled = true;
             this.btnWest.Location = new System.Drawing.Point(16, 48);
             this.btnWest.Name = "btnWest";
@@ -243,7 +244,7 @@ namespace ShivasTower
             // 
             // btnEast
             // 
-            this.btnEast.Image = AppResources.east;
+            this.btnEast.Image = Resources.east;
             this.btnEast.Enabled = true;
             this.btnEast.Location = new System.Drawing.Point(112, 48);
             this.btnEast.Name = "btnEast";
@@ -254,7 +255,7 @@ namespace ShivasTower
             // 
             // btnSouth
             // 
-            this.btnSouth.Image = AppResources.south;
+            this.btnSouth.Image = Resources.south;
             this.btnSouth.Enabled = true;
             this.btnSouth.Location = new System.Drawing.Point(56, 96);
             this.btnSouth.Name = "btnSouth";

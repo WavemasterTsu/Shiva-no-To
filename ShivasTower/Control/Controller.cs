@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Xml;
 
+using ShivasTower.Properties;
 using ShivasTower.Load.Xml;
 using ShivasTower.Model.Map;
 using ShivasTower.Model.Objects;
@@ -235,7 +236,7 @@ namespace ShivasTower.Control
 
                     if (objRoom != null && (objRoom.Location == objInitialRoom.Location))
                     {
-                        lblMap[col, row].Image = AppResources.sonic;
+                        lblMap[col, row].Image = Resources.sonic;
                     }
 
                     if (objRoom == null)
@@ -288,7 +289,7 @@ namespace ShivasTower.Control
                 lblOutput.Text = objGetData.CurrentRoom.MovementText;
 
                 //prints the image on the new Room
-                lblMap[objGetData.CurrentLocation.x, objGetData.CurrentLocation.y].Image = AppResources.sonic;
+                lblMap[objGetData.CurrentLocation.x, objGetData.CurrentLocation.y].Image = Resources.sonic;
 
                 LevelOverTransition();
             }
