@@ -234,19 +234,24 @@ namespace ShivasTower.Control
 
                     Room objRoom = objGetData.GetRoomByLocation(col, row);
 
+                    Color objColor = Color.Black;
+
                     if (objRoom != null && (objRoom.Location == objInitialRoom.Location))
                     {
                         lblMap[col, row].Image = Resources.sonic;
+                        objColor = Color.White;
                     }
 
                     if (objRoom == null)
                     {
-                        lblMap[col, row].BackColor = Color.Black;                           //color inaccessible rooms black
+                        objColor = Color.Black;                       //color inaccessible rooms black
+                    }
+                    else if (objRoom.IsLocked)
+                    {
+                        objColor = Color.Black;
                     }
                     else
                     {
-                        Color objColor = Color.Black;
-
                         switch (objRoom.Special)
                         {
                             case ESpecial.Lever:
@@ -265,9 +270,9 @@ namespace ShivasTower.Control
                                 objColor = Color.White;               //everything else is white
                                 break;
                         }
-
-                        lblMap[col, row].BackColor = objColor;
                     }
+
+                    lblMap[col, row].BackColor = objColor;
                 }
             }
         }
@@ -305,6 +310,8 @@ namespace ShivasTower.Control
 
             lblOutput.Text = objGetData.CurrentRoom.ExamineText;
 
+            GoFillMapState();
+
             GoPlayState();
         }
 
@@ -312,8 +319,11 @@ namespace ShivasTower.Control
         {
             PlayGameState = PlayGameStates.Action;
 
-            objGetData.CurrentRoom.PerformAction();
             lblOutput.Text = objGetData.CurrentRoom.ActionText;
+
+            objGetData.CurrentRoom.PerformAction();
+
+            GoFillMapState();
 
             GoPlayState();
         }

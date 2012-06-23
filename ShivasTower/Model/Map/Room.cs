@@ -23,7 +23,7 @@ namespace ShivasTower.Model.Map
             set;
         }
 
-        private bool IsLocked
+        public bool IsLocked
         {
             get
             {
